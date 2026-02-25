@@ -6,11 +6,17 @@
       "id": "jp1",
       "volumeInfo": {
         "title": "Norwegian Wood",
-        "authors": ["Haruki Murakami"],
+        "authors": [
+          "Haruki Murakami"
+        ],
         "publishedDate": "1987",
         "description": "A nostalgic story of loss and sexuality set in 1960s Japan.",
-        "categories": ["Japanese literature"],
-        "imageLinks": { "thumbnail": "/images/jp1.jpg" },
+        "categories": [
+          "Japanese literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/jp1.jpg"
+        },
         "language": "ja"
       }
     },
@@ -18,11 +24,17 @@
       "id": "jp2",
       "volumeInfo": {
         "title": "Convenience Store Woman",
-        "authors": ["Sayaka Murata"],
+        "authors": [
+          "Sayaka Murata"
+        ],
         "publishedDate": "2018",
         "description": "A haunting, dark, and often hilarious take on society's expectations of the single woman' Elif Batuman, author of The Idiot",
-        "categories": ["Japanese literature"],
-        "imageLinks": { "thumbnail": "/images/jp2.jpg" },
+        "categories": [
+          "Japanese literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/jp2.jpg"
+        },
         "language": "ja"
       }
     },
@@ -30,11 +42,17 @@
       "id": "jp3",
       "volumeInfo": {
         "title": "There's no such thing as an easy job",
-        "authors": ["Kikuko Tsumura"],
+        "authors": [
+          "Kikuko Tsumura"
+        ],
         "publishedDate": "2015",
         "description": "A young woman walks into an employment agency and requests a job that has the following traits: it is close to her home, and it requires no reading, no writing – and ideally, very little thinking.",
-        "categories": ["Japanese literature"],
-        "imageLinks": { "thumbnail": "/images/jp3.jpg" },
+        "categories": [
+          "Japanese literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/jp3.jpg"
+        },
         "language": "ja"
       }
     },
@@ -42,11 +60,17 @@
       "id": "br1",
       "volumeInfo": {
         "title": "Dom Casmurro",
-        "authors": ["Machado de Assis"],
+        "authors": [
+          "Machado de Assis"
+        ],
         "publishedDate": "1899",
         "description": "A psychological novel exploring jealousy and memory in Brazil.",
-        "categories": ["Brazilian literature"],
-        "imageLinks": { "thumbnail": "/images/br1.jpg" },
+        "categories": [
+          "Brazilian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/br1.jpg"
+        },
         "language": "pt"
       }
     },
@@ -54,11 +78,17 @@
       "id": "br2",
       "volumeInfo": {
         "title": "The Hour of the Star",
-        "authors": ["Clarice Lispector"],
+        "authors": [
+          "Clarice Lispector"
+        ],
         "publishedDate": "1977",
         "description": "A minimalist novel about a poor young woman in Rio de Janeiro.",
-        "categories": ["Brazilian literature"],
-        "imageLinks": { "thumbnail": "/images/br2.jpg" },
+        "categories": [
+          "Brazilian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/br2.jpg"
+        },
         "language": "pt"
       }
     },
@@ -66,11 +96,17 @@
       "id": "br3",
       "volumeInfo": {
         "title": "Crooked Plow",
-        "authors": ["Itamar Vieira Junior"],
+        "authors": [
+          "Itamar Vieira Junior"
+        ],
         "publishedDate": "2019",
         "description": "Heralded as the most important Brazilian novel of the century so far, this bestseller's unique blend of magic and social realism won it three literary awards and global acclaim.",
-        "categories": ["Brazilian literature"],
-        "imageLinks": { "thumbnail": "/images/br3.jpg" },
+        "categories": [
+          "Brazilian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/br3.jpg"
+        },
         "language": "pt"
       }
     },
@@ -78,11 +114,17 @@
       "id": "kr1",
       "volumeInfo": {
         "title": "The Vegetarian",
-        "authors": ["Han Kang"],
+        "authors": [
+          "Han Kang"
+        ],
         "publishedDate": "2007",
         "description": "A haunting story of rebellion and transformation.",
-        "categories": ["Korean literature"],
-        "imageLinks": { "thumbnail": "/images/kr1.jpg" },
+        "categories": [
+          "Korean literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/kr1.jpg"
+        },
         "language": "ko"
       }
     },
@@ -90,11 +132,17 @@
       "id": "kr2",
       "volumeInfo": {
         "title": "Please Look After Mom",
-        "authors": ["Shin Kyung-sook"],
+        "authors": [
+          "Shin Kyung-sook"
+        ],
         "publishedDate": "2008",
         "description": "A family reflects on the disappearance of their mother.",
-        "categories": ["Korean literature"],
-        "imageLinks": { "thumbnail": "/images/kr2.jpg" },
+        "categories": [
+          "Korean literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/kr2.jpg"
+        },
         "language": "ko"
       }
     },
@@ -102,11 +150,17 @@
       "id": "kr3",
       "volumeInfo": {
         "title": "Cursed Bunny",
-        "authors": ["Bora Chung"],
+        "authors": [
+          "Bora Chung"
+        ],
         "publishedDate": "2017",
         "description": "Blurring the lines between magical realism, horror, and science-fiction, Chung uses elements of the fantastic and surreal to address the very real horrors and cruelties of patriarchy and capitalism in modern society.",
-        "categories": ["Korean literature"],
-        "imageLinks": { "thumbnail": "/images/kr3.jpg" },
+        "categories": [
+          "Korean literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/kr3.jpg"
+        },
         "language": "ko"
       }
     },
@@ -114,11 +168,17 @@
       "id": "eg1",
       "volumeInfo": {
         "title": "The Cairo Trilogy",
-        "authors": ["Naguib Mahfouz"],
+        "authors": [
+          "Naguib Mahfouz"
+        ],
         "publishedDate": "1956",
         "description": "A sweeping saga of three generations in Cairo.",
-        "categories": ["Egyptian literature"],
-        "imageLinks": { "thumbnail": "/images/eg1.jpg" },
+        "categories": [
+          "Egyptian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/eg1.jpg"
+        },
         "language": "ar"
       }
     },
@@ -126,11 +186,17 @@
       "id": "eg2",
       "volumeInfo": {
         "title": "Season of Migration to the North",
-        "authors": ["Tayeb Salih"],
+        "authors": [
+          "Tayeb Salih"
+        ],
         "publishedDate": "1966",
         "description": "A postcolonial exploration of identity and displacement.",
-        "categories": ["Egyptian literature"],
-        "imageLinks": { "thumbnail": "/images/eg2.jpg" },
+        "categories": [
+          "Egyptian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/eg2.jpg"
+        },
         "language": "ar"
       }
     },
@@ -138,11 +204,17 @@
       "id": "sn1",
       "volumeInfo": {
         "title": "So Long a Letter",
-        "authors": ["Mariama Bâ"],
+        "authors": [
+          "Mariama Bâ"
+        ],
         "publishedDate": "1979",
         "description": "An epistolary novel about love and tradition in Senegal.",
-        "categories": ["Senegalese literature"],
-        "imageLinks": { "thumbnail": "/images/sn1.jpg" },
+        "categories": [
+          "Senegalese literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/sn1.jpg"
+        },
         "language": "fr"
       }
     },
@@ -150,11 +222,17 @@
       "id": "sn2",
       "volumeInfo": {
         "title": "God's Bits of Wood",
-        "authors": ["Ousmane Sembène"],
+        "authors": [
+          "Ousmane Sembène"
+        ],
         "publishedDate": "1960",
         "description": "A novel about a railway strike in colonial West Africa.",
-        "categories": ["Senegalese literature"],
-        "imageLinks": { "thumbnail": "/images/sn2.jpg" },
+        "categories": [
+          "Senegalese literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/sn2.jpg"
+        },
         "language": "fr"
       }
     },
@@ -162,11 +240,17 @@
       "id": "ar1",
       "volumeInfo": {
         "title": "Hopscotch",
-        "authors": ["Julio Cortázar"],
+        "authors": [
+          "Julio Cortázar"
+        ],
         "publishedDate": "1963",
         "description": "An experimental novel about love and existentialism.",
-        "categories": ["Argentine literature"],
-        "imageLinks": { "thumbnail": "/images/ar1.jpg" },
+        "categories": [
+          "Argentine literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/ar1.jpg"
+        },
         "language": "es"
       }
     },
@@ -174,11 +258,17 @@
       "id": "ar2",
       "volumeInfo": {
         "title": "The Tunnel",
-        "authors": ["Ernesto Sabato"],
+        "authors": [
+          "Ernesto Sabato"
+        ],
         "publishedDate": "1948",
         "description": "A psychological novel about obsession.",
-        "categories": ["Argentine literature"],
-        "imageLinks": { "thumbnail": "/images/ar2.jpg" },
+        "categories": [
+          "Argentine literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/ar2.jpg"
+        },
         "language": "es"
       }
     },
@@ -186,11 +276,17 @@
       "id": "co1",
       "volumeInfo": {
         "title": "One Hundred Years of Solitude",
-        "authors": ["Gabriel García Márquez"],
+        "authors": [
+          "Gabriel García Márquez"
+        ],
         "publishedDate": "1967",
         "description": "A landmark novel of magical realism.",
-        "categories": ["Colombian literature"],
-        "imageLinks": { "thumbnail": "/images/co1.jpg" },
+        "categories": [
+          "Colombian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/co1.jpg"
+        },
         "language": "es"
       }
     },
@@ -198,11 +294,17 @@
       "id": "co2",
       "volumeInfo": {
         "title": "Love in the Time of Cholera",
-        "authors": ["Gabriel García Márquez"],
+        "authors": [
+          "Gabriel García Márquez"
+        ],
         "publishedDate": "1985",
         "description": "A decades-spanning love story.",
-        "categories": ["Colombian literature"],
-        "imageLinks": { "thumbnail": "/images/co2.jpg" },
+        "categories": [
+          "Colombian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/co2.jpg"
+        },
         "language": "es"
       }
     },
@@ -210,11 +312,17 @@
       "id": "pa1",
       "volumeInfo": {
         "title": "The Great Divide",
-        "authors": ["Cristina Henríquez"],
+        "authors": [
+          "Cristina Henríquez"
+        ],
         "publishedDate": "2024",
         "description": "A powerful novel about the construction of the Panama Canal, casting light on the unsung people who lived, loved, and labored there",
-        "categories": ["Panamanian literature"],
-        "imageLinks": { "thumbnail": "/images/pa1.jpg" },
+        "categories": [
+          "Panamanian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/pa1.jpg"
+        },
         "language": "es"
       }
     },
@@ -222,11 +330,17 @@
       "id": "pa2",
       "volumeInfo": {
         "title": "Luna Verde",
-        "authors": ["Joaquín Beleño"],
+        "authors": [
+          "Joaquín Beleño"
+        ],
         "publishedDate": "1951",
         "description": "A novel about social injustice in Panama.",
-        "categories": ["Panamanian literature"],
-        "imageLinks": { "thumbnail": "/images/pa2.jpg" },
+        "categories": [
+          "Panamanian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/pa2.jpg"
+        },
         "language": "es"
       }
     },
@@ -234,11 +348,17 @@
       "id": "au1",
       "volumeInfo": {
         "title": "Cloudstreet",
-        "authors": ["Tim Winton"],
+        "authors": [
+          "Tim Winton"
+        ],
         "publishedDate": "1991",
         "description": "A story of two working-class Australian families.",
-        "categories": ["Australian literature"],
-        "imageLinks": { "thumbnail": "/images/au1.jpg" },
+        "categories": [
+          "Australian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/au1.jpg"
+        },
         "language": "en"
       }
     },
@@ -246,11 +366,17 @@
       "id": "au2",
       "volumeInfo": {
         "title": "Picnic at Hanging Rock",
-        "authors": ["Joan Lindsay"],
+        "authors": [
+          "Joan Lindsay"
+        ],
         "publishedDate": "1967",
         "description": "A mysterious disappearance in rural Australia.",
-        "categories": ["Australian literature"],
-        "imageLinks": { "thumbnail": "/images/au2.jpg" },
+        "categories": [
+          "Australian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/au2.jpg"
+        },
         "language": "en"
       }
     },
@@ -258,11 +384,17 @@
       "id": "in1",
       "volumeInfo": {
         "title": "Midnight's Children",
-        "authors": ["Salman Rushdie"],
+        "authors": [
+          "Salman Rushdie"
+        ],
         "publishedDate": "1981",
         "description": "A magical realist novel set during India's independence.",
-        "categories": ["Indian literature"],
-        "imageLinks": { "thumbnail": "/images/in1.jpg" },
+        "categories": [
+          "Indian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/in1.jpg"
+        },
         "language": "en"
       }
     },
@@ -270,11 +402,17 @@
       "id": "in2",
       "volumeInfo": {
         "title": "The God of Small Things",
-        "authors": ["Arundhati Roy"],
+        "authors": [
+          "Arundhati Roy"
+        ],
         "publishedDate": "1997",
         "description": "A story of family and forbidden love in Kerala.",
-        "categories": ["Indian literature"],
-        "imageLinks": { "thumbnail": "/images/in2.jpg" },
+        "categories": [
+          "Indian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/in2.jpg"
+        },
         "language": "en"
       }
     },
@@ -282,11 +420,17 @@
       "id": "pl1",
       "volumeInfo": {
         "title": "Fado",
-        "authors": ["Andrzej Sapkowski"],
+        "authors": [
+          "Andrzej Sapkowski"
+        ],
         "publishedDate": "2006",
         "description": "Inspired by Jack Kerouac s On the Road, Andrzej Stasiuk, Poland s most accomplished living prose writer, takes readers into the forgotten Europe.",
-        "categories": ["Polish literature"],
-        "imageLinks": { "thumbnail": "/images/pl1.jpg" },
+        "categories": [
+          "Polish literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/pl1.jpg"
+        },
         "language": "pl"
       }
     },
@@ -294,11 +438,17 @@
       "id": "pl2",
       "volumeInfo": {
         "title": "Drive Your Plow Over the Bones of the Dead",
-        "authors": ["Olga Tokarczuk"],
+        "authors": [
+          "Olga Tokarczuk"
+        ],
         "publishedDate": "2009",
         "description": "A literary mystery set in rural Poland.",
-        "categories": ["Polish literature"],
-        "imageLinks": { "thumbnail": "/images/pl2.jpg" },
+        "categories": [
+          "Polish literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/pl2.jpg"
+        },
         "language": "pl"
       }
     },
@@ -306,11 +456,17 @@
       "id": "no1",
       "volumeInfo": {
         "title": "Hunger",
-        "authors": ["Knut Hamsun"],
+        "authors": [
+          "Knut Hamsun"
+        ],
         "publishedDate": "1890",
         "description": "A psychological novel of urban alienation.",
-        "categories": ["Norwegian literature"],
-        "imageLinks": { "thumbnail": "/images/no1.jpg" },
+        "categories": [
+          "Norwegian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/no1.jpg"
+        },
         "language": "no"
       }
     },
@@ -318,11 +474,17 @@
       "id": "no2",
       "volumeInfo": {
         "title": "The Ice Palace",
-        "authors": ["Tarjei Vesaas"],
+        "authors": [
+          "Tarjei Vesaas"
+        ],
         "publishedDate": "1963",
         "description": "Commonly seen as the legendary Norwegian writer's masterpiece, this story tells the tale of Siss and Unn, two friends.",
-        "categories": ["Norwegian literature"],
-        "imageLinks": { "thumbnail": "/images/no2.jpg" },
+        "categories": [
+          "Norwegian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/no2.jpg"
+        },
         "language": "no"
       }
     },
@@ -330,11 +492,17 @@
       "id": "ru1",
       "volumeInfo": {
         "title": "Crime and Punishment",
-        "authors": ["Fyodor Dostoevsky"],
+        "authors": [
+          "Fyodor Dostoevsky"
+        ],
         "publishedDate": "1866",
         "description": "A psychological exploration of guilt and redemption.",
-        "categories": ["Russian literature"],
-        "imageLinks": { "thumbnail": "/images/ru1.jpg" },
+        "categories": [
+          "Russian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/ru1.jpg"
+        },
         "language": "ru"
       }
     },
@@ -342,11 +510,17 @@
       "id": "ru2",
       "volumeInfo": {
         "title": "War and Peace",
-        "authors": ["Leo Tolstoy"],
+        "authors": [
+          "Leo Tolstoy"
+        ],
         "publishedDate": "1869",
         "description": "An epic novel set during the Napoleonic wars.",
-        "categories": ["Russian literature"],
-        "imageLinks": { "thumbnail": "/images/ru2.jpg" },
+        "categories": [
+          "Russian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/ru2.jpg"
+        },
         "language": "ru"
       }
     },
@@ -354,11 +528,17 @@
       "id": "ua1",
       "volumeInfo": {
         "title": "Fieldwork in Ukrainian Sex",
-        "authors": ["Oksana Zabuzhko"],
+        "authors": [
+          "Oksana Zabuzhko"
+        ],
         "publishedDate": "1996",
         "description": "A feminist novel exploring identity and relationships.",
-        "categories": ["Ukrainian literature"],
-        "imageLinks": { "thumbnail": "/images/ua1.jpg" },
+        "categories": [
+          "Ukrainian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/ua1.jpg"
+        },
         "language": "uk"
       }
     },
@@ -366,11 +546,17 @@
       "id": "ua2",
       "volumeInfo": {
         "title": "Sweet Darusya",
-        "authors": ["Maria Matios"],
+        "authors": [
+          "Maria Matios"
+        ],
         "publishedDate": "2004",
         "description": "A tragic story set in rural Ukraine.",
-        "categories": ["Ukrainian literature"],
-        "imageLinks": { "thumbnail": "/images/ua2.jpg" },
+        "categories": [
+          "Ukrainian literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/ua2.jpg"
+        },
         "language": "uk"
       }
     },
@@ -378,11 +564,17 @@
       "id": "cn1",
       "volumeInfo": {
         "title": "To Live",
-        "authors": ["Yu Hua"],
+        "authors": [
+          "Yu Hua"
+        ],
         "publishedDate": "1993",
         "description": "A powerful novel following one man's endurance through decades of political and social upheaval in 20th-century China.",
-        "categories": ["Chinese literature"],
-        "imageLinks": { "thumbnail": "/images/cn1.jpg" },
+        "categories": [
+          "Chinese literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/cn1.jpg"
+        },
         "language": "zh"
       }
     },
@@ -390,11 +582,17 @@
       "id": "cn2",
       "volumeInfo": {
         "title": "The Three-Body Problem",
-        "authors": ["Liu Cixin"],
+        "authors": [
+          "Liu Cixin"
+        ],
         "publishedDate": "2006",
         "description": "A science fiction epic where first contact with an alien civilization reshapes humanity's future.",
-        "categories": ["Chinese literature"],
-        "imageLinks": { "thumbnail": "/images/cn2.jpg" },
+        "categories": [
+          "Chinese literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/cn2.jpg"
+        },
         "language": "zh"
       }
     },
@@ -402,11 +600,17 @@
       "id": "gr1",
       "volumeInfo": {
         "title": "The Odyssey",
-        "authors": ["Homer"],
+        "authors": [
+          "Homer"
+        ],
         "publishedDate": "801",
         "description": "Odyssey is literature's grandest evocation of everyman's journey though life.",
-        "categories": ["Greek literature"],
-        "imageLinks": { "thumbnail": "/images/gr1.jpg" },
+        "categories": [
+          "Greek literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/gr1.jpg"
+        },
         "language": "gr"
       }
     },
@@ -414,11 +618,17 @@
       "id": "gr2",
       "volumeInfo": {
         "title": "Zorba the Greek",
-        "authors": ["Nikos Kazantzakis"],
+        "authors": [
+          "Nikos Kazantzakis"
+        ],
         "publishedDate": "1946",
         "description": "The classic novel Zorba the Greek is the story of two men, their incredible friendship, and the importance of living life to the fullest.",
-        "categories": ["Greek literature"],
-        "imageLinks": { "thumbnail": "/images/gr2.jpg" },
+        "categories": [
+          "Greek literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/gr2.jpg"
+        },
         "language": "gr"
       }
     },
@@ -426,11 +636,17 @@
       "id": "tr1",
       "volumeInfo": {
         "title": "Madonna in a Fur Coat",
-        "authors": ["Sabahattin Ali"],
+        "authors": [
+          "Sabahattin Ali"
+        ],
         "publishedDate": "1943",
         "description": "A shy young man leaves his home in rural Turkey to learn a trade in 1920s Berlin.",
-        "categories": ["Turkish literature"],
-        "imageLinks": { "thumbnail": "/images/tr1.jpg" },
+        "categories": [
+          "Turkish literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/tr1.jpg"
+        },
         "language": "tr"
       }
     },
@@ -438,11 +654,17 @@
       "id": "tr2",
       "volumeInfo": {
         "title": "My Name is Red",
-        "authors": ["Orhan Pamuk"],
+        "authors": [
+          "Orhan Pamuk"
+        ],
         "publishedDate": "1998",
         "description": "Part fantasy and part philosophical puzzle, My Name is Red is a kaleidoscopic journey to the intersection of art, religion, love, sex and power.",
-        "categories": ["Turkish literature"],
-        "imageLinks": { "thumbnail": "/images/tr2.jpg" },
+        "categories": [
+          "Turkish literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/tr2.jpg"
+        },
         "language": "tr"
       }
     },
@@ -450,11 +672,17 @@
       "id": "is1",
       "volumeInfo": {
         "title": "Independent People",
-        "authors": ["Halldór Laxness"],
+        "authors": [
+          "Halldór Laxness"
+        ],
         "publishedDate": "1934",
         "description": "Having spent eighteen years in humiliating servitude, Bjartur wants nothing more than to raise his flocks unbeholden to any man. But Bjartur's spirited daughter wants to live unbeholden to him.",
-        "categories": ["Icelandic literature"],
-        "imageLinks": { "thumbnail": "/images/is1.jpg" },
+        "categories": [
+          "Icelandic literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/is1.jpg"
+        },
         "language": "is"
       }
     },
@@ -462,11 +690,17 @@
       "id": "is2",
       "volumeInfo": {
         "title": "The Greenhouse",
-        "authors": ["Auður Ava Ólafsdóttir"],
+        "authors": [
+          "Auður Ava Ólafsdóttir"
+        ],
         "publishedDate": "2007",
         "description": "A story about the heartfelt search for beauty in life,  The Greenhouse is a touching reminder of our ability to turn the small things in everyday life into the extraordinary.",
-        "categories": ["Icelandic literature"],
-        "imageLinks": { "thumbnail": "/images/is2.jpg" },
+        "categories": [
+          "Icelandic literature"
+        ],
+        "imageLinks": {
+          "thumbnail": "/images/is2.jpg"
+        },
         "language": "is"
       }
     }
