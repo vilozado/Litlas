@@ -13,9 +13,12 @@
   padding-left: 1rem;
 }
 
-.saved-books-title {
+.my-list-btn {
   font-size: 1.1rem;
   color: #F8F7F4;
   text-decoration: none;
   padding-right: 1rem;
+  background-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
 }
