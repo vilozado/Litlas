@@ -1,9 +1,27 @@
 import type { Modal } from "../../types/modal"
 import { createPortal } from "react-dom"
 import './BookModal.css'
+import { useState, useEffect } from "react";
 
 export default function BookModal(props: Modal) {
-  const randomBook = props.books[Math.floor(Math.random() * props.books.length)];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const randomBook = Math.floor(Math.random() * props.books.length);
+  const currentBook = props.books[currentIndex];
+
+  useEffect(() => {
+    setCurrentIndex(randomBook)
+  }, [props.country]);
+
+
+  const handleNext = () => {
+    console.log('books length: ', props.books.length);
+    console.log('current index: ', currentIndex);
+    console.log('currentBook:', currentBook)
+
+    setCurrentIndex(prev => (prev + 1) % props.books.length)
+  }
 
   if (!props.open) return null;
 
@@ -18,13 +36,15 @@ export default function BookModal(props: Modal) {
         </div>
         <div className="modal-body">
           {
-            randomBook && (
+            currentBook && (
               <>
-                <img src={randomBook.thumbnail} />
-                <h2>{randomBook.title}</h2>
-                <p>{randomBook.author}</p>
-                <p>{randomBook.publishedDate}</p>
-                <p>{randomBook.description}</p>
+                <img src={currentBook.thumbnail} className="book-cover" />
+                <div className="book-content">
+                  <p id="book-title">{currentBook.title}</p>
+                  <p>{currentBook.author}</p>
+                  <p>{currentBook.publishedDate}</p>
+                  <p id="book-description">{currentBook.description}</p>
+                </div>
               </>
             )
           }
@@ -33,7 +53,7 @@ export default function BookModal(props: Modal) {
           <button type="button" id="tbr-btn">
             Add to My Reading List
           </button>
-          <button type="button" id="next-btn">
+          <button type="button" id="next-btn" onClick={handleNext}>
             Next
           </button>
         </div>

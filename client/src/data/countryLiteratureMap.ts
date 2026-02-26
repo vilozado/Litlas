@@ -19,7 +19,11 @@ const countryLiteratureMap: Record<string, LiteratureTradition> = {
   "Australia": { subject: "australian literature", label: "Australian Literature" },
   "Ukraine": { subject: "ukrainian literature", label: "Ukrainian Literature" },
   "Iceland": { subject: "icelandic literature", label: "Icelandic Literature" },
+  // "USA": { subject: "american literature", label: "American Literature" },
+  // "South Africa": { subject: "south african literature", label: "South African Literature" },
   // "Canada": { subject: "canadian literature", label: "Canadian Literature" },
+  // "Algeria": { subject: "algerian literature", label: "Algerian Literature" },
+
 }
 
 export default countryLiteratureMap;

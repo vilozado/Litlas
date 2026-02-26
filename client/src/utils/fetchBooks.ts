@@ -1,8 +1,9 @@
 import mockBooks from '../../mocks/mockBooks.json';
 import type { Book } from '../types/book';
-import type { GoogleBooksItem } from '../types/googleBooksRes';
+import type { GoogleBooksItem, GoogleBooksResponse } from '../types/googleBooksRes';
 
 const useMock = true;
+const cache = new Map<string, Book[]>();
 
 export const fetchBooks = async (subject: string): Promise<Book[]> => {
   if (useMock) {
@@ -11,11 +12,17 @@ export const fetchBooks = async (subject: string): Promise<Book[]> => {
       .filter((item) => item.subject === subject)
       .map((item) => transformBookData(item as GoogleBooksItem, subject))
       .filter((book): book is Book => book !== null)
-  }
+  } else {
+    if (cache.has(subject)) return cache.get(subject)!;
+    const res = await fetch(`/api/books?subject=${encodeURIComponent(subject)}`);
+    const data: GoogleBooksResponse = await res.json();
+    const books = (data.items ?? [])
+      .map(item => transformBookData(item, subject))
+      .filter((book): book is Book => book !== null)
 
-  const response = await fetch(`/api/books?subject=${encodeURIComponent(subject)}`);
-  const data = await response.json();
-  return data;
+    cache.set(subject, books);
+    return books;
+  }
 }
 
 const transformBookData = (item: GoogleBooksItem, subject: string): Book | null => {

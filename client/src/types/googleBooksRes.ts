@@ -13,3 +13,9 @@ export interface GoogleBooksItem {
     language?: string
   }
 }
+
+export interface GoogleBooksResponse {
+  kind: string,
+  totalItem: number,
+  items?: GoogleBooksItem[]
+}

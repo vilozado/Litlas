@@ -25,7 +25,6 @@ export default function Map() {
     });
 
     layer?.on('click', () => handleCountryClick(feature));
-
   }
 
   const handleCountryClick = async (feature: Feature) => {
@@ -48,9 +47,9 @@ export default function Map() {
     const countryName = feature?.properties?.name;
     const isMapped = countryName && countryLiteratureMap[countryName];
     return {
-      fillColor: isMapped ? '#1F5E57' : '#bdbebe',
+      fillColor: isMapped ? '#1E2A38' : '#f8f2e0',
       fillOpacity: 1,
-      color: '#f5f5f5',
+      color: '#5f6368f8',
       weight: 1
     }
   }
@@ -58,8 +57,7 @@ export default function Map() {
   return (
     <div>
       <BookModal open={showBookModal} onClose={() => setShowBookModal(false)} country={selectedCountry} books={books} />
-      <MapContainer className='map-container' center={[25, 30]} zoom={3} scrollWheelZoom={false} zoomControl={true} keyboard={true} style={{ height: '722px', width: '100%', backgroundColor: '#F8F7F4' }}>
-        {/* <TileLayer attribution='&copy; OpenStreetMap' url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png" /> */}
+      <MapContainer className='map-container' center={[25, 30]} zoom={3} scrollWheelZoom={false} zoomControl={true} keyboard={true} style={{ height: '652px', width: '100%', backgroundColor: '#F8F7F4' }}>
         <GeoJSON data={worldGeoJSON as any} style={getCountryStyle} onEachFeature={onEachFeature} />
       </MapContainer>
     </div>
