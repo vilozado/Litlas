@@ -1,6 +1,28 @@
-/* .sidebar {
-  background: red;
-  width: 300px;
-  min-height: 100px;
-  position: absolute
-} */
+.sidebar {
+  background-color: #fffbee;
+  width: 17rem;
+  height: 100%;
+  position: absolute;
+  z-index: 2000;
+  overflow-y: auto;
+  top: 0;
+  right: 0;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 1rem;
+}
+
+.sidebar-cover {
+  height: 22rem;
+  width: 15rem;
+  border-radius: 5px;
+}
+
+.sidebar-info {
+  display: flex;
+}

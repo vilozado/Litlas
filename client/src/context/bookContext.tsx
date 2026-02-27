@@ -29,7 +29,7 @@ export function BookProvider({ children }: { children: React.ReactNode }) {
   const addToReadingList = (book: Book) => {
     setReadingList(prev => {
       if (prev.some(b => b.id === book.id)) return prev;
-      return [...prev, book]
+      return [...prev, book];
     })
   }
 

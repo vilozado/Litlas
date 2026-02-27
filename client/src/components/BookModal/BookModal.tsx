@@ -46,10 +46,10 @@ export default function BookModal(props: Modal) {
           }
         </div>
         <div className="btn-container">
-          <button type="button" id="tbr-btn" onClick={() => currentBook && addToReadingList}>
+          <button type="button" className="modal-btn" onClick={() => addToReadingList(currentBook)}>
             Add to My Reading List
           </button>
-          <button type="button" id="next-btn" onClick={handleNext}>
+          <button type="button" className="modal-btn" onClick={handleNext}>
             Next
           </button>
         </div>

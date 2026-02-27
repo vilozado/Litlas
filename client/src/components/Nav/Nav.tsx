@@ -1,11 +1,15 @@
 import './Nav.css';
 
-export default function Nav({ onMyListClick }) {
+// ! TODO: change any type to custom type
+export default function Nav({ onMyListClick }: any) {
   return (
     <>
       <nav className='navbar'>
         <h1 className='title'>L I T L A S</h1>
-        <button onClick={onMyListClick} className='my-list-btn'>My List</button>
+        <div className='nav-left'>
+          <button onClick={onMyListClick} className='nav-links'>Reading List</button>
+          <button onClick={onMyListClick} className='nav-links'>Stats</button>
+        </div>
       </nav>
     </>
   )
