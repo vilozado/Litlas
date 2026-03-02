@@ -1,8 +1,5 @@
-type LiteratureTradition = {
-  subject: string,
-}
 
-const countryLiteratureMap: Record<string, LiteratureTradition> = {
+const countryLiteratureMap: Record<string, { subject: string }> = {
   "Russia": { subject: "russian literature" },
   "Japan": { subject: "japanese literature" },
   "Argentina": { subject: "argentine literature" },

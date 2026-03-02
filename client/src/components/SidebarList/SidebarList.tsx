@@ -15,8 +15,8 @@ export default function SidebarList() {
 
       ) : (
         <>
-          <select className='sidebar-filter'>
-          </select>
+          {/* <select className='sidebar-filter'>
+          </select> */}
           <ul className="sidebar-list">
             {readingList.map((book) => (
               <SidebarItem key={book.id} book={book} />

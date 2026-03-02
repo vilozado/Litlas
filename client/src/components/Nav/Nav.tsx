@@ -1,15 +1,17 @@
 import './Nav.css';
+import logo from '../../assets/logo.png'
 
+interface NavProps {
+  onMyListClick: () => void
+}
 
-// ! TODO: change any type to custom type
-export default function Nav({ onMyListClick }: any) {
+export default function Nav({ onMyListClick }: NavProps) {
   return (
     <>
       <nav className='navbar'>
-        <h1 className='title'>LITLAS</h1>
+        <img src={logo} className='logo'></img>
         <div className='nav-left'>
           <button onClick={onMyListClick} className='nav-links'>Reading List</button>
-          {/* <button onClick={onMyListClick} className='nav-links'>Stats</button> */}
         </div>
       </nav>
     </>

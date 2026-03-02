@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: #faf9f6;
+  background-color: #fbf9f6;
   width: 18rem;
   height: 100%;
   position: absolute;
@@ -22,7 +22,7 @@
   width: 80%;
   font-size: 1.15rem;
   padding: 0.2em;
-  background-color: #fff;
+  background-color: #fff9f9;
   border: 1px solid #caced1;
   border-radius: 0.25rem;
   color: #000;

@@ -1,5 +1,5 @@
-import { createPortal } from "react-dom"
 import './BookModal.css'
+import { createPortal } from "react-dom"
 import { useState, useEffect } from "react";
 import { useBookContext } from "../../context/useBookContext";
 
@@ -14,10 +14,10 @@ export default function BookModal({ open, onClose }: Modal) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (!open || !selectedBooks.length) return;
-    const randomIndex = Math.floor(Math.random() * selectedBooks.length);
-    setCurrentIndex(randomIndex);
-  }, [open, selectedBooks]);
+    if (open && selectedBooks.length) {
+      setCurrentIndex(Math.floor(Math.random() * selectedBooks.length)); //how could I deal with cascading rerenders?
+    }
+  }, [open, selectedBooks.length]);
 
   const currentBook = selectedBooks[currentIndex];
 

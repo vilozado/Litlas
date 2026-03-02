@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import router from './router';
+import connectDb from './models';
 
 dotenv.config();
 const app = express();
@@ -11,9 +12,12 @@ app.use(cors({
   origin: 'http://localhost:5173'
 }));
 app.use(express.json());
-app.use('/api', router);
+app.use(router);
 
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+(async function bootstrap() {
+  await connectDb();
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+})();

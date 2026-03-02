@@ -19,9 +19,6 @@ export default function SidebarItem({ book }: sidebarProps) {
           <img src={book.thumbnail} alt={book.title} className="sidebar-cover" />
           <div className="btns-overlay">
             <button onClick={() => updateBookStatus(book.id, 'read')}>
-              Reading
-            </button>
-            <button onClick={() => updateBookStatus(book.id, 'read')}>
               Read
             </button>
           </div>

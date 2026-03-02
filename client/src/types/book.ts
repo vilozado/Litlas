@@ -1,4 +1,4 @@
-export type BookStatus = 'to be read' | 'reading' | 'read';
+export type BookStatus = 'to be read' | 'read';
 
 export interface Book {
   id: string,

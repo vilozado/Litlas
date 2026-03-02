@@ -8,7 +8,6 @@ const cache = new Map<string, Book[]>();
 
 export const fetchBooks = async (subject: string): Promise<Book[]> => {
   if (mock) {
-    await new Promise((resolve) => setTimeout(resolve, 500));
     return mockBooks.items
       .filter(book => book.subject === subject)
       .map(book => transformBookData(book as GoogleBooksItem, subject))
