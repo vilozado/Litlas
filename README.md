@@ -6,7 +6,7 @@ Welcome to **Litlas**, a full-stack web application that encourages readers to e
 **Demo video:**
 
 ## Screenshot
-![Screenshot](Screenshot%202026-03-03%20at%2007.46.29.png)
+![Screenshor](<img width="1470" height="797" alt="Screenshot 2026-03-03 at 07 46 29" src="https://github.com/user-attachments/assets/a77915bd-71ac-4127-b122-1e6cca1ed815" />)
 
 # Features
 * **Interactive World Map:** Click on any country to receive a book recommendation from that nation’s literary tradition. The map acts as both a discovery tool and a visual progress tracker.
