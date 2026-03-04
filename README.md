@@ -2,12 +2,13 @@
 
 # Litlas
 Welcome to **Litlas**, a full-stack web application that encourages readers to explore world literature through an interactive map-based experience. Users can discover books from different countries, build a personalized reading list, and visually track their progress across the globe.
-~[Features](https://github.com/vilozado/Litlas#features)~ · ~[Tech Stack](https://github.com/vilozado/Litlas#tech-stack)~
+
+[Features](https://github.com/vilozado/Litlas#features) · [Tech Stack](https://github.com/vilozado/Litlas#tech-stack)
 
 </div>
 
 ## Demo / Screenshot
-**Demo video:** *~YouTube Link~*
+**Demo video:** [Youtube Link](https://youtu.be/ERnae2dgKm4)
 
 ### Screenshot
 <img width="1470" height="797" alt="Main Screenshot" src="https://github.com/user-attachments/assets/e0d91903-955c-49e8-8606-4fa4e59de454" />
