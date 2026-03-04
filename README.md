@@ -1,9 +1,9 @@
 <div align="center"> 
-
 # Litlas
 Welcome to **Litlas**, a full-stack web application that encourages readers to explore world literature through an interactive map-based experience. Users can discover books from different countries, build a personalized reading list, and visually track their progress across the globe.
 
-[Features](https://github.com/vilozado/Litlas#features) · [Tech Stack](https://github.com/vilozado/Litlas#tech-stack)
+[Features](#features) · [Tech Stack](#tech-stack) · [Getting Started](#getting-started)
+
 
 </div>
 
@@ -13,6 +13,7 @@ Welcome to **Litlas**, a full-stack web application that encourages readers to e
 ### Screenshot
 <img width="1470" height="797" alt="Main Screenshot" src="https://github.com/user-attachments/assets/e0d91903-955c-49e8-8606-4fa4e59de454" />
 
+
 ## Features
 * **Interactive World Map:** Click on any country to receive a book recommendation from that nation’s literary tradition. The map acts as both a discovery tool and a visual progress tracker.
 * **Dynamic Recommendations:** Save the current recommendation to your reading list or click **Next** to generate another suggestion instantly.
@@ -20,6 +21,7 @@ Welcome to **Litlas**, a full-stack web application that encourages readers to e
 * **Progress Counters:** The sidebar displays counters for books saved, books read, and total countries explored.
 * **Book-to-Map Synchronization:** Each saved book updates the map’s visual state. Countries are highlighted when added to the reading list and change color once marked as read.
 * **Dynamic Literature Visualization:** The app provides a real-time global overview of the user’s literary journey, turning reading data into an interactive geographic experience.
+
 
 ## Tech Stack
 **Frontend**
@@ -32,6 +34,7 @@ Welcome to **Litlas**, a full-stack web application that encourages readers to e
 * Node.js + Express (REST API)
 * MongoDB + Mongoose (data persistence / ODM)
 * Google Books API (external book data source)
+
 
 ## Getting Started
 ### Pre-requisites
@@ -79,11 +82,13 @@ npm run dev
 * **Frontend**:  http://localhost:5173
 * **Backend**:  http://localhost:3000
 
+
 ## Roadmap / Remaining Tasks
 * **User Authentication:** Enable account creation and login (JWT) to store personal reading data.
 * **Stats Dashboard:** Expand progress counters into an advanced dashboard with custom reading goals, author diversity, and genre distribution.
 * **AI Recommendations:** Personalize book suggestions based on user preferences and reading history.
 * **Discovery Mode:** Add a feature that suggests a recommendation from a random country.
+
 
 ## Project Context
 Designed and developed independently during the Codeworks Fullstack Bootcamp.
