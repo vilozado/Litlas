@@ -1,4 +1,4 @@
-import express from "express";
+import { Router } from "express";
 import {
   getBooksBySubject,
   addBookToList,
@@ -6,9 +6,9 @@ import {
   updateBook,
   removeBook,
 } from "../controllers/bookController";
-const router = express.Router();
+const router: Router = Router();
 
-router.get("/api/books", getBooksBySubject); //Google Books API
+router.get("/books", getBooksBySubject); //Google Books API
 router.get("/reading-list", getBookList);
 router.post("/reading-list", addBookToList);
 router.patch("/reading-list/:id", updateBook);

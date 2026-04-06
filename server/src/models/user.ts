@@ -14,6 +14,7 @@ const userSchema = new Schema({
   email: {
     type: String,
     required: true,
+    unique: true,
   },
   password: {
     type: String,
@@ -21,5 +22,5 @@ const userSchema = new Schema({
   },
 });
 
-const Book = mongoose.model("user", userSchema);
+const Book = mongoose.model("User", userSchema);
 export default Book;

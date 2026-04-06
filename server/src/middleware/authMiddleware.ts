@@ -1,36 +1,40 @@
 import { Request, Response, NextFunction } from "express";
-import jwt from "jsonwebtoken";
-
-interface UserPayload extends jwt.JwtPayload {
-  id: string;
-}
+import User from "../models/user";
 
 declare global {
   namespace Express {
     interface Request {
-      user?: UserPayload;
+      user?: InstanceType<typeof User>;
     }
   }
 }
-export const authMiddleware = (
+
+export const authMiddleware = async (
   req: Request,
   res: Response,
   next: NextFunction,
 ) => {
-  const token = req.headers.authorization?.split(" ")[1];
+  const userId = req.session.uid;
 
-  if (!token) {
-    return res.status(401).json({ error: "Access denied, no token provided" });
+  if (!userId) {
+    return res
+      .status(401)
+      .json({ data: null, error: { code: 401, msg: "Not authenticated" } });
   }
 
   try {
-    const decoded = jwt.verify(
-      token,
-      process.env.JWT_SECRET as string,
-    ) as UserPayload;
-    req.user = decoded;
+    const user = await User.findById(userId);
+    if (!user) {
+      return res
+        .status(401)
+        .json({ data: null, error: { code: 401, msg: "Not authenticated" } });
+    }
+    req.user = user;
     next();
   } catch (error) {
-    res.status(401).json({ error: "Invalid token" });
+    console.error("Auth middleware error:", error);
+    return res
+      .status(500)
+      .json({ data: null, error: { code: 500, msg: "Internal Server Error" } });
   }
 };
