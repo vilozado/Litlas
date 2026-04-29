@@ -65,7 +65,7 @@ redisClient.on("error", (err) => console.error("Redis error:", err));
         saveUninitialized: false,
         store: redisStore,
         cookie: {
-          secure: false,
+          secure: process.env.NODE_ENV === "production",
           maxAge: 1000 * 60 * 60,
           sameSite: "lax",
           httpOnly: true,

@@ -7,6 +7,7 @@ const bookSchema = new Schema({
   id: {
     type: String,
     required: true,
+    index: true,
   },
   subject: {
     type: String,
@@ -34,6 +35,8 @@ const bookSchema = new Schema({
     type: String,
   },
 });
+
+bookSchema.index({ id: 1, userId: 1 }, { unique: true });
 
 const Book = mongoose.model("book", bookSchema);
 export default Book;

@@ -2,28 +2,29 @@ import React, { createContext, useState, useEffect } from "react";
 
 import type { Book, BookStatus, SavedBook } from "../types/book";
 import { fetchBooks } from "../services/fetchBooks";
-import { fetchSavedBooks } from "../services/savedBooksService";
+import { fetchSavedBooks, fetchExploredSubjects } from "../services/savedBooksService";
 import { useAuth } from "./authContext";
 
 interface BookContextType {
-  selectedBooks: Book[]; //array of books on country click
+  selectedBooks: Book[];
   selectedCountry: string | null;
-  setBookByCountry: (country: string, subject: string) => Promise<void>; //fetch books by country and subject
-  loadingApp: boolean; //indicates if the app is still loading data from the backend
-  readingList: SavedBook[]; //array of books in reading list
-  addToReadingList: (book: SavedBook) => void; //adds a book to the reading list
-  updateBookStatus: (id: string, status: BookStatus) => void; //function to update the status of a book in the reading list
-  deleteSavedBook: (id: string) => void; //function to delete a book from the reading list
+  setBookByCountry: (country: string, subject: string) => Promise<void>;
+  loadingApp: boolean;
+  readingList: SavedBook[];
+  exploredSubjects: Set<string>;
+  addToReadingList: (book: SavedBook) => void;
+  updateBookStatus: (id: string, status: BookStatus) => void;
+  deleteSavedBook: (id: string) => void;
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const BookContext = createContext<BookContextType | null>(null);
 
 export function BookProvider({ children }: { children: React.ReactNode }) {
-  //wraps the app and provides the book context to all components
   const [selectedBooks, setSelectedBooks] = useState<Book[]>([]);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [readingList, setReadingList] = useState<SavedBook[]>([]);
+  const [exploredSubjects, setExploredSubjects] = useState<Set<string>>(new Set());
   const [loadingApp, setLoadingApp] = useState<boolean>(true);
   const { isAuthenticated, isLoading } = useAuth();
 
@@ -32,6 +33,7 @@ export function BookProvider({ children }: { children: React.ReactNode }) {
 
     if (!isAuthenticated) {
       setReadingList([]);
+      setExploredSubjects(new Set());
       setSelectedBooks([]);
       setSelectedCountry(null);
       setLoadingApp(false);
@@ -39,11 +41,20 @@ export function BookProvider({ children }: { children: React.ReactNode }) {
     }
     setLoadingApp(true);
 
-    fetchSavedBooks()
-      .then(setReadingList)
+    Promise.all([fetchSavedBooks(), fetchExploredSubjects()])
+      .then(([books, explored]) => {
+        setReadingList(books);
+        // Merge DB-persisted explored subjects with subjects of currently "read" books.
+        // This covers existing users whose exploredSubjects field starts empty.
+        const fromBooks = books
+          .filter((b) => b.status === "read")
+          .map((b) => b.subject);
+        setExploredSubjects(new Set([...explored, ...fromBooks]));
+      })
       .catch((err) => {
         console.error(err);
         setReadingList([]);
+        setExploredSubjects(new Set());
       })
       .finally(() => setLoadingApp(false));
   }, [isAuthenticated, isLoading]);
@@ -63,9 +74,13 @@ export function BookProvider({ children }: { children: React.ReactNode }) {
   };
 
   const updateBookStatus = (id: string, status: BookStatus) => {
-    setReadingList((prev) =>
-      prev.map((book) => (book.id === id ? { ...book, status } : book)),
-    );
+    setReadingList((prev) => {
+      if (status === "read") {
+        const book = prev.find((b) => b.id === id);
+        if (book) setExploredSubjects((s) => new Set([...s, book.subject]));
+      }
+      return prev.map((book) => (book.id === id ? { ...book, status } : book));
+    });
   };
 
   const deleteSavedBook = (id: string) => {
@@ -78,6 +93,7 @@ export function BookProvider({ children }: { children: React.ReactNode }) {
         selectedBooks,
         selectedCountry,
         readingList,
+        exploredSubjects,
         loadingApp,
         setBookByCountry,
         addToReadingList,

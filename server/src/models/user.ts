@@ -16,6 +16,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  exploredSubjects: {
+    type: [String],
+    default: [],
+  },
 });
 
 const Book = mongoose.model("User", userSchema);

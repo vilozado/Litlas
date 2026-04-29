@@ -8,7 +8,7 @@ export interface Book {
   publishedDate: string | number | null;
   description: string | null;
   categories: string[];
-  thumbnail: string;
+  thumbnail?: string;
 }
 
 export interface SavedBook extends Book {

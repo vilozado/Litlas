@@ -1,6 +1,6 @@
 import { getCSRFToken as fetchCSRFToken } from "../utils/fetchUtils";
 
-const base_url = "http://localhost:3000";
+const base_url = import.meta.env.VITE_API_URL;
 const auth_url = `${base_url}/auth`;
 
 let csrfToken: string | null = null;

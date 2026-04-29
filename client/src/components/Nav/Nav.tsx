@@ -1,5 +1,4 @@
 import "./Nav.css";
-import logo from "../../assets/logo.png";
 import { logout } from "../../services/authService";
 import { useNavigate } from "react-router";
 import { useAuth } from "../../context/authContext";
@@ -20,7 +19,7 @@ export default function Nav({ onMyListClick }: NavProps) {
 
   return (
     <nav className="navbar">
-      <img src={logo} className="logo" alt="logo"></img>
+      <h1 className="title-nav">LITLAS</h1>
       <div className="nav-left">
         <button onClick={onMyListClick} className="nav-links">
           Reading List

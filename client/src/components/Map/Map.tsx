@@ -15,7 +15,7 @@ type CountryFeature = Feature<Geometry, CountryProps>;
 
 export default function Map() {
   const [showBookModal, setShowBookModal] = useState(false);
-  const { setBookByCountry, readingList } = useBookContext();
+  const { setBookByCountry, readingList, exploredSubjects } = useBookContext();
 
   const handleCountryClick = async (feature: CountryFeature) => {
     const countryName = feature.properties.name;
@@ -31,17 +31,12 @@ export default function Map() {
     }
   };
 
-  const { savedSubjects, readSubjects } = useMemo(() => {
-    // Compute sets of subjects for saved and read books to determine country colors on the map
-    const saved = new Set();
-    const read = new Set();
-
+  const savedSubjects = useMemo(() => {
+    const saved = new Set<string>();
     for (const book of readingList) {
       if (book.status === "to be read") saved.add(book.subject);
-      if (book.status === "read") read.add(book.subject);
     }
-
-    return { savedSubjects: saved, readSubjects: read };
+    return saved;
   }, [readingList]);
 
   const getCountryStyle: StyleFunction<CountryProps> = (feature) => {
@@ -58,7 +53,7 @@ export default function Map() {
     const subject = countryLiteratureMap[countryName]?.subject; //ex: "French Literature"
     const isMapped = Boolean(countryName && subject); // Check if the country is mapped in countryLiteratureMap
     const isSaved = subject ? savedSubjects.has(subject) : false;
-    const isRead = subject ? readSubjects.has(subject) : false;
+    const isRead = subject ? exploredSubjects.has(subject) : false;
 
     return {
       fillColor: isSaved
@@ -97,7 +92,7 @@ export default function Map() {
         scrollWheelZoom={false}
         zoomControl={true}
         keyboard={true}
-        style={{ height: "766px", width: "100%", backgroundColor: "#a7cdf2" }}
+        style={{ height: "100vh", width: "100%", backgroundColor: "#a7cdf2" }}
       >
         <Legend />
         <GeoJSON

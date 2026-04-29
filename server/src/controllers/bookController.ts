@@ -1,5 +1,6 @@
 import { Request, RequestHandler, Response } from "express";
 import Book from "../models/book";
+import User from "../models/user";
 import { Types } from "mongoose";
 
 type BooksbySubjectQuery = {
@@ -82,7 +83,8 @@ const addBookToList: RequestHandler<{}, unknown, AddBookBody> = async (
       status: status,
     });
     return res.status(201).json(added);
-  } catch (error) {
+  } catch (error: any) {
+    if (error?.code === 11000) return res.status(409).json({ msg: "Book already in reading list." });
     res.status(500).json(error);
   }
 };
@@ -99,7 +101,24 @@ const updateBook = async (req: Request, res: Response) => {
 
     if (!updatedBook)
       return res.status(404).json({ error: { msg: "Book not found" } });
+
+    if (req.body.status === "read") {
+      await User.findByIdAndUpdate(req.user!.id, {
+        $addToSet: { exploredSubjects: updatedBook.subject },
+      });
+    }
+
     res.status(200).json(updatedBook);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+};
+
+const getExploredSubjects = async (req: Request, res: Response) => {
+  try {
+    const user = await User.findById(req.user!.id).select("exploredSubjects");
+    if (!user) return res.status(404).json({ msg: "User not found" });
+    res.status(200).json(user.exploredSubjects);
   } catch (error) {
     res.status(500).json(error);
   }
@@ -121,4 +140,5 @@ export {
   addBookToList,
   updateBook,
   removeBook,
+  getExploredSubjects,
 };

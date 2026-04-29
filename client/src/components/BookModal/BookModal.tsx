@@ -11,13 +11,15 @@ interface BookModalProps {
 }
 
 export default function BookModal({ open, onClose }: BookModalProps) {
-  const { selectedBooks, selectedCountry, addToReadingList } = useBookContext();
+  const { selectedBooks, selectedCountry, addToReadingList, deleteSavedBook } = useBookContext();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
 
   useEffect(() => {
-    // When the modal opens and there are selected books, randomly select one to display first
     if (open && selectedBooks.length) {
       setCurrentIndex(Math.floor(Math.random() * selectedBooks.length));
+      setSaveError(null);
     }
   }, [open, selectedBooks.length]);
 
@@ -25,14 +27,27 @@ export default function BookModal({ open, onClose }: BookModalProps) {
 
   const handleNext = () => {
     if (!selectedBooks.length) return;
-    setCurrentIndex((prev) => (prev + 1) % selectedBooks.length); // Cycle through the selected books
+    setSaveError(null);
+    setCurrentIndex((prev) => (prev + 1) % selectedBooks.length);
   };
 
-  const handleAdd = () => {
-    if (!currentBook) return;
-    const savedBook: SavedBook = { ...currentBook, status: "to be read" }; // Add status to the book object on save
-    addToReadingList(savedBook); // Update the reading list in context
-    postBook(savedBook); // Persist the saved book to the backend
+  const handleAdd = async () => {
+    if (!currentBook || saving) return;
+    const savedBook: SavedBook = { ...currentBook, status: "to be read" };
+    addToReadingList(savedBook);
+    setSaving(true);
+    setSaveError(null);
+    try {
+      await postBook(savedBook);
+    } catch (err) {
+      const isDuplicate = err instanceof Error && err.message === "Book already in reading list.";
+      if (!isDuplicate) {
+        deleteSavedBook(savedBook.id);
+        setSaveError("Couldn't save the book. Please try again.");
+      }
+    } finally {
+      setSaving(false);
+    }
   };
 
   if (!open) return null; // Don't render anything if the modal is not open
@@ -71,9 +86,14 @@ export default function BookModal({ open, onClose }: BookModalProps) {
           )}
         </div>
         <div className="btn-container">
-          <button className="add-btn" onClick={handleAdd}>
-            ★ Save
+          <button className="add-btn" onClick={handleAdd} disabled={saving}>
+            {saving ? "Saving..." : "★ Save"}
           </button>
+          {saveError && (
+            <p style={{ color: "#b00020", fontSize: "13px", alignSelf: "center", margin: 0 }}>
+              {saveError}
+            </p>
+          )}
           <button className="next-btn" onClick={handleNext}>
             NEXT
           </button>

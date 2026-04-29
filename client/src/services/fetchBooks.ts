@@ -5,7 +5,7 @@ import type {
   GoogleBooksResponse,
 } from "../types/googleBooks";
 
-const mock = true;
+const mock = import.meta.env.VITE_USE_MOCKS; // Determine whether to use mock data based on the VITE_USE_MOCKS environment variable, which can be set in the .env file
 const cache = new Map<string, Book[]>(); // In-memory cache to store fetched books by subject if clicked multiple times on the same country
 
 export const fetchBooks = async (subject: string): Promise<Book[]> => {
@@ -23,7 +23,7 @@ export const fetchBooks = async (subject: string): Promise<Book[]> => {
     const cached = cache.get(subject);
     if (cached) return cached;
     const res = await fetch(
-      `/api/books?subject=${encodeURIComponent(subject)}`, // Make a GET request to the backend API to fetch books by subject, encoding the subject to ensure it's safe for use in a URL
+      `${import.meta.env.VITE_API_URL}/dashboard/books?subject=${encodeURIComponent(subject)}`, // Make a GET request to the backend API to fetch books by subject, encoding the subject to ensure it's safe for use in a URL
     );
     const data: GoogleBooksResponse = await res.json();
     const books = (data.items ?? [])
@@ -40,13 +40,13 @@ const transformBookData = (
 ): Book | null => {
   const { volumeInfo } = book; // Extract volumeInfo from the Google Books API response
 
-  if (!volumeInfo.imageLinks?.thumbnail) return null; // Skip books without covers for display in the UI
+  // if (!volumeInfo.imageLinks?.thumbnail) return null; // Skip books without covers for display in the UI
 
   return {
     id: book.id,
     title: volumeInfo.title,
     author: volumeInfo.authors?.[0] ?? "Unknown author",
-    thumbnail: volumeInfo.imageLinks.thumbnail.replace("http://", "https://"), // Ensure cover URLs use HTTPS
+    thumbnail: volumeInfo.imageLinks?.thumbnail?.replace("http://", "https://"), // Ensure cover URLs use HTTPS
     publishedDate: volumeInfo.publishedDate
       ? parseInt(volumeInfo.publishedDate?.substring(0, 4)) // Extract just the year from the publishedDate string and convert to a number
       : "Unknown date",
